@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<students_list>
+    <student>
+        <name>Abhishek M </name>
+        <place> Bangalore </place>
+        <dob> 27-April-1998 </dob>
+        <college>RVCE </college>
+    </student>
+
+    <student>
+        <name>Uday M </name>
+        <place> Mangalore </place>
+        <dob> 20-June-1998 </dob>
+        <college>RVCE </college>
+    </student>
+
+    <student>
+        <name>Ayush </name>
+        <place> Ranchi </place>
+        <dob> 27-December-2000 </dob>
+        <college>RVCE </college>
+    </student>
+
+    <student>
+        <name>Junaid </name>
+        <place> Hassan </place>
+        <dob> 10-Jan-1999 </dob>
+        <college>RVCE </college>
+    </student>
+
+</students_list>
+
+
+
+
