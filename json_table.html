@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+
+        }
+
+        th,
+        td {
+            padding: 5px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="display()">Click to show JSON Table</button>
+    <table border="1" id="tab"></table>
+
+    <!-- <script type="text/javascript" src="books.json"></script> -->
+    <script>
+        function display(){
+            var books = [
+    {
+        "Book_ID": "1",
+        "Book_Name": "Computer Architecture",
+        "Category": "Computers",
+        "Price": "125.60"
+    },
+    {
+        "Book_ID": "2",
+        "Book_Name": "Asp.Net 4 Blue Book",
+        "Category": "Programming",
+        "Price": "56.00"
+    },
+    {
+        "Book_ID": "3",
+        "Book_Name": "Popular Science",
+        "Category": "Science",
+        "Price": "210.40"
+    }
+];
+            var table = "<tr><th>ID</th><th>NAME</th><th>CATEGORY</th><th>PRICE</th></tr>";
+            books.forEach(function(d){
+                table+="<tr><td>"+d.Book_ID+"</td><td>"
+                    +d.Book_Name+"</td><td>"
+                    +d.Category+"</td><td>"
+                    +d.Price+"</td></tr>";
+                    document.getElementById("tab").innerHTML=table;
+            })
+        }
+    </script>
+
+</body>
+</html>
