@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="first.js"></script>
+    <style>
+        .container {
+            border: 1px solid black;
+            width: 40%;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            /* bring your own prefixes */
+            transform: translate(-50%, -50%);
+        }
+
+        /* .row{
+            border: 1px solid black;
+        } */
+        .form-group {
+            padding: 20px 90px;
+            margin: auto;
+        }
+
+        label,
+        input {
+            font-size: 20px;
+        }
+
+        button {
+            margin-left: 250px;
+        }
+
+        .radio {
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container bg-faded">
+        <form name="form1" action="second.html" method="GET">
+            <div class="form-group">
+                <label> Username : </label>
+                <input type="text" class="form-control" placeholder="Type ur username" id="username" name="user">
+            </div>
+            <div class="form-group">
+                <label>Password : </label>
+                <input type="password" class="form-control" id="pwd" name="password" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,16}">
+            </div>
+            <!-- <div class="form-group radio">
+                <input type="radio" name="role" value="student">Student
+                <input type="radio" name="role" value="teacher">Teacher
+            </div> -->
+            <button type="submit" name="submit" onclick="validate()" class="btn btn-success"> Sign in</button>
+
+        </form>
+    </div>
+
+
+</body>
+
+</html>
