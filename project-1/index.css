@@ -1,0 +1,44 @@
+/* navbar and main starts here */
+
+.container-fluid {
+    height: 100vh;
+    border: 1px solid black;
+    border-width: 5px;
+    /* Created with https://www.css-gradient.com */
+background: #EC89EC;
+background: -webkit-linear-gradient(right, #EC89EC, #869BEA);
+background: -moz-linear-gradient(right, #EC89EC, #869BEA);
+background: linear-gradient(to left, #EC89EC, #869BEA);
+}
+
+
+
+.center{
+    position: relative;
+}
+
+.box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* navbar and main ends here */
+
+/* courses starts here */
+
+.icon_background{
+    width: 100%;
+    height: 300px;
+    border-radius: 2000px;
+    border: 1px solid black;
+}
+
+
+
+
+
+
+
+/* courses ends here */
