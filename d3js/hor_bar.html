@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <svg></svg>
+  </body>
+
+  <script>
+      const dataset = [100, 300, 200, 100];
+
+const barHeight = 100;
+const barYPadding = 4;
+
+const svgWidth = 600;
+const svgHeight = barHeight * dataset.length;
+
+const svg = d3
+  .select("svg")
+  .attr("height", svgHeight)
+  .attr("width", svgWidth)
+  .style("background-color", "blue");
+
+svg
+  .selectAll("rect")
+  .data(dataset)
+  .enter()
+  .append("rect")
+  .attr("width", function (dataEle) {
+    return dataEle;
+  })
+  .attr("height", barHeight - barYPadding)
+  .attr("y", function (dataEle, index) {
+    return index * barHeight;
+  })
+  .style("fill", "purple");
+
+svg
+  .selectAll("text")
+  .data(dataset)
+  .enter()
+  .append("text")
+  .attr("x", function (dataEle) {
+    return dataEle + 10;
+  })
+  .attr("y", function (dataEle, index) {
+    return index * barHeight + 50;
+  })
+  .text(function (dataEle) {
+    return dataEle;
+  });
+
+  </script>
+</html>

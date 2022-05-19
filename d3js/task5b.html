@@ -1,0 +1,84 @@
+
+<html>
+<head>
+	<title>D3.js Bar Graph</title>
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<style>
+		svg{
+			border : 5px solid orange;
+			background-color : "blue";
+		}
+		body{
+			background-color : lightblue;
+		}
+		h1{
+			text-align : center;
+		}
+		.row{
+			height : 50vh;
+		}
+
+
+		.bar {
+            		fill: black;
+        	}
+        	svg text {
+            		text-anchor:top;
+        		color:red;
+         	}
+
+		
+	</style>
+</head>
+
+<body>
+	<h1>Horizontal Bar Graph</h1>
+	<div class="container-fluid"> 
+		<div class="row">
+  		<div class="col-md-4" id="graph1"></div>
+	</div>
+	
+	<script>
+		const scaleFactor = 20;
+		const barHeight = 30;
+		const barPadding = 5;
+		
+		const data=[50,20,40,10,30,20,60]
+		const svgWidth = Math.max(...data) * scaleFactor * 1.1;
+		const svgHeight = data.length * barHeight;
+
+		const graph = d3
+			.select("#graph1")
+			.append("svg")
+			.attr("width",svgWidth)
+			.attr("height",svgHeight)
+
+		var bar = graph.selectAll("g")
+			.data(data)
+			.enter()
+			.append("g")
+			.attr("transform",function(d,i){return "translate(0," + i * barHeight + ")";});
+			bar.append("rect")
+			.attr("width",function(d){return d*scaleFactor;})
+			.attr("height",barHeight-1);
+
+			bar.append("text")
+			.attr("x",function(d){return(d*scaleFactor);})
+			.attr("y",barHeight/2)
+			.attr("dy", ".35rem")
+			.text(function(d){return d;});
+
+			
+
+
+	</script>
+</body>
+</html>
+
+
+
+	
+

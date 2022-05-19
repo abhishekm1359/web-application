@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <!-- The HTML defer attribute is a Boolean attribute which is 
+        used to specify that script is executed when the page has finished parsing.  -->
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <svg></svg>
+  </body>
+
+  <script>
+      const dataset = [200, 100, 400, 500];
+
+var svgHeight = d3.max(dataset) + 100;
+var svgWidth = 500;
+var barPadding = 5;
+
+var barWidth = svgWidth / dataset.length;
+
+var svg = d3.select("svg").attr("height", svgHeight).attr("width", svgWidth);
+
+var barChart = svg
+  .selectAll("rect")
+  .data(dataset)
+  .enter()
+  .append("rect")
+  .attr("height", (d) => d)
+  .attr("width", barWidth - barPadding)
+  .attr("y", function (dataEle, i) {
+    return svgHeight - dataEle;
+  })
+  .attr("x", function (dataEle, i) {
+    return barWidth * i;
+  });
+
+var text = svg
+  .selectAll("text")
+  .data(dataset)
+  .enter()
+  .append("text")
+  .text((dataEle) => dataEle)
+  .attr("y", function (dataEle, i) {
+    return svgHeight - dataEle - 5;
+  })
+  .attr("x", function (dataEle, i) {
+    return barWidth * i + 40;
+  });
+
+  </script>
+</html>
