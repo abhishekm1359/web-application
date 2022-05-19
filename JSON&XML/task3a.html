@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+        <head>
+                <title>
+                        XML PROGRAM
+                </title>
+        <style>
+                        table{
+                             display : flex;
+                             justify-content : center;
+                             align-items : center;
+                             margin : 50px
+                        }
+
+                        th{
+                                border:1px solid black;
+                                padding : 10px 50px;
+                                background-color : brown;
+                                color :  white;
+                        }
+                        td{
+                                padding : 10px;
+                                border:1px solid black;
+                                color : blue;
+                                text-align : center;
+                        }
+                        h1{
+                                text-align : center;
+                                color : red;
+                        }
+                        .btn{
+                                padding : 5px;
+                                display : flex;
+                                justify-content : center;
+                                align-items : center;
+
+
+                        }
+
+
+        </style>
+        </head>
+<body>
+
+                <h1>Student Details</h1><br>
+        <div class="btn">
+                <button class="btn" type="button" onclick="studentData()">SHOW XML STUDENT DETAILS</button>
+        </div>
+        <div>
+                <table id="tab"></table>
+        </div>
+
+<script>
+		function studentData(){
+		var xmlhttp=new XMLHttpRequest();
+		xmlhttp.onreadystatechange=function(){
+			if(this.readyState==4 && this.status==200){
+				myFunction(this);
+			}
+		};
+		xmlhttp.open("GET","table.xml",true);
+		xmlhttp.send();
+		}
+
+		function myFunction(xml){
+			var i;
+			var xmlDoc=xml.responseXML;
+			var table="<tr><th>ID</th><th>NAME</th><th>PLACE</th><th>COLLEGE</th></tr>";
+			var x=xmlDoc.getElementsByTagName("student");
+			for(i=0;i<x.length;i++){
+				table+="<tr><td>"+x[i].getElementsByTagName("id")[0].childNodes[0].nodeValue+"</td><td>"
+					+x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue+"</td><td>"
+					+x[i].getElementsByTagName("place")[0].childNodes[0].nodeValue+"</td><td>" 
+					+x[i].getElementsByTagName("college")[0].childNodes[0].nodeValue+"</td></tr>"; 
+			}
+		document.getElementById("tab").innerHTML=table;
+	}
+</script>
+</body>
+</html>
+

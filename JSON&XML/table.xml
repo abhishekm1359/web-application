@@ -1,0 +1,58 @@
+<student_info>
+	<student>
+		<id>RVCE21MCA071</id>
+		<name>Abhishek M</name>
+		<place>Bangalore</place>
+		<college>RVCE MCA</college>
+	</student>
+
+	<student>
+                <id>RVCE21MCA091</id>
+                <name>Uday</name>
+                <place>Bangalore</place>
+                <college>RVCE ME</college>
+        </student>
+ 
+	<student>
+                <id>RVCE21MCA105</id>
+                <name>Mahesh</name>
+                <place>Mangalore</place>
+                <college>RVCE CS</college>
+        </student>
+
+	<student>
+                <id>RVCE21MCA085</id>
+                <name>Sharath</name>
+                <place>Mysore</place>
+                <college>RVCE EEE</college>
+        </student>
+
+	<student>
+                <id>RVCE21MCA020</id>
+                <name>Akash</name>
+                <place>Tumkur</place>
+                <college>RVCE IP</college>
+        </student>
+
+	<student>
+                <id>RVCE21MCA100</id>
+                <name>Chethan</name>
+                <place>Delhi</place>
+                <college>RVCE</college>
+        </student>
+
+	<student>
+                <id>RVCE21MCA120</id>
+                <name>Manoj</name>
+                <place>Bangalore</place>
+                <college>MES</college>
+        </student>
+
+	<student>
+                <id>RVCE21MCA045</id>
+                <name>Varun</name>
+                <place>Magadi</place>
+                <college>NMIT</college>
+        </student>
+	
+</student_info>

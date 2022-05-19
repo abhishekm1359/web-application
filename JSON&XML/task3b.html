@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+        <head>
+                <title>
+                        JSON PROGRAM
+                </title>
+        <style>
+                        table{
+                             display : flex;
+                             justify-content : center;
+                             align-items : center;
+                             margin : 50px
+                        }
+
+                        th{
+                                border:1px solid black;
+                                padding : 10px 50px;
+                                background-color : brown;
+                                color :  white;
+                        }
+                        td{
+                                padding : 10px;
+                                border:1px solid black;
+                                color : blue;
+                                text-align : center;
+                        }
+                        h1{
+                                text-align : center;
+                                color : red;
+                        }
+                        .btn{
+                                padding : 5px;
+				display : flex;
+                             	justify-content : center;
+                            	align-items : center;
+                               
+
+                        }
+
+
+        </style>
+        </head>
+<body>
+
+        	<h1>Student Details</h1><br>
+	<div class="btn">
+        	<button class="btn" type="button" onclick="studentData()">SHOW JSON STUDENT DETAILS</button>
+	</div>
+        <div>
+                <table id="tab"></table>
+        </div>
+        <script>
+                function studentData(){
+                      var student= [ 
+			{
+				"ID" : "RVCE21MCA071",
+				"NAME" : "Abhishek",
+				"COLLEGE" : "RVCE",
+				"COURSE" : "MCA"
+			},
+			{ 
+                                "ID" : "RVCE21BE085",
+                                "NAME" : "Uday",
+                                "COLLEGE" : "RVCE",
+                                "COURSE" : "BE"
+                        },
+			{ 
+                                "ID" : "NMIT21MTE100",
+                                "NAME" : "Sharath",
+                                "COLLEGE" : "NMIT",
+                                "COURSE" : "M.TEC"
+                        },
+			{ 
+                                "ID" : "ACHA21BE150",
+                                "NAME" : "Akash",
+                                "COLLEGE" : "Acharya",
+                                "COURSE" : "BE"
+                        },
+			{ 
+                                "ID" : "RVVA21MCA050",
+                                "NAME" : "Varun",
+                                "COLLEGE" : "REVA",
+                                "COURSE" : "MCA"
+                        },
+			{
+                                "ID" : "ACHA21BE150",
+                                "NAME" : "Akash",
+                                "COLLEGE" : "Acharya",
+                                "COURSE" : "BE"
+                        },
+			{
+                                "ID" : "PES21MEC250",
+                                "NAME" : "Ajith",
+                                "COLLEGE" : "PES",
+                                "COURSE" : "Mechanical"
+                        },
+			{
+                                "ID" : "RMIT21MCA150",
+                                "NAME" : "Chethan",
+                                "COLLEGE" : "RMIT",
+                                "COURSE" : "MCA"
+                        }
+
+
+		]
+
+		var table = "<tr><th>ID</th><th>NAME</th><th>COLLEGE</th><th>COURSE</th></tr>"
+		student.forEach(function(d){
+			table += "<tr><td>"+d.ID+"</td><td>"
+				+d.NAME+"</td><td>"
+				+d.COLLEGE+"</td><td>"
+				+d.COURSE+"</td></tr>"
+		});
+                document.getElementById("tab").innerHTML=table;
+        }
+</script>
+</body>
+</html>
+
+
