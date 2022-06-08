@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>xml</title>
+        <style>
+            th{
+                                border:1px solid black;
+                                padding : 10px 50px;
+                                background-color : brown;
+                                color :  white;
+                        }
+                        td{
+                                padding : 10px;
+                                border:1px solid black;
+                                color : blue;
+                                text-align : center;
+                        }
+        </style>
+    </head>
+
+    <body>
+        <h1>XML</h1>
+        <button onclick="display()">Show xml table</button>
+        <table id="tab"></table>
+
+        <script>
+            function display(){
+                var req = new XMLHttpRequest();
+                req.onreadystatechange = function(){
+                    if(this.readyState == 4 && this.status == 200){
+                        myfunc(this);
+                    }
+                };
+                req.open("GET","student.xml",true);
+                req.send();
+            }
+
+            function myfunc(xml){
+                var res = xml.responseXML;
+                var x = res.getElementsByTagName("student");
+                table = "</tr><th>name</th><th>usn</th><th>place</th></tr>";
+                for(var i=0 ; i<x.length; i++){
+                    table += "<tr><td>"+x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue+"</td><td>"
+                                    +x[i].getElementsByTagName("usn")[0].childNodes[0].nodeValue+"</td><td>"
+                                    +x[i].getElementsByTagName("place")[0].childNodes[0].nodeValue+"</td></tr>";
+                }
+                document.getElementById("tab").innerHTML = table;
+            }
+        </script>
+    </body>
+</html>

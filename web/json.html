@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Json</title>
+        <style>
+            th{
+                                border:1px solid black;
+                                padding : 10px 50px;
+                                background-color : brown;
+                                color :  white;
+                        }
+                        td{
+                                padding : 10px;
+                                border:1px solid black;
+                                color : blue;
+                                text-align : center;
+                        }
+        </style>
+    </head>
+
+    <body>
+        <h1>Json data</h1>
+        <button onclick="display()">Show Json Data</button>
+        <table id="tab"></table>
+        <script>
+            function display(){
+
+                var req = new XMLHttpRequest();
+                req.onreadystatechange = function(){
+                    if(this.readyState == 4 && this.status == 200){
+                        var res = JSON.parse(this.responseText);
+                        var table = "<tr><th>name</th><th>age</th><th>place</th></tr>"
+                        for(i of res){
+                            table += "<tr><td>"+i.name+"</td><td>"
+                                                +i.age+"</td><td>"
+                                                +i.place+"</td></tr>"
+                        }
+                        document.getElementById("tab").innerHTML = table;
+                    }
+                }
+                req.open("GET" , "student.json",true);
+                req.send();
+            }
+        </script>
+    </body>
+</html>

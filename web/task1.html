@@ -1,0 +1,136 @@
+<html>
+    <head>
+        <title>Bootstrap</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+          <style>
+              nav{
+                  margin: 0;
+                  padding: 5px;
+              }
+              ul li {
+                    display: inline;
+                    margin: auto;
+                    padding: 95px;
+                    font-size : 20px
+              }
+
+              ul li a:hover{
+                color : orange;
+                transform: translateY(20px);
+              }
+              button{
+                  font-size: 20px;
+                  margin-top : 5px
+              }
+              .col-md-3{
+                  /* padding: 5px; */
+                  /* border: 1px solid black; */
+                  border-radius: 5px;
+              }
+              .col-md-3{
+                  display: flex;
+                  justify-content: center;
+              }
+              .card:hover{
+                  transform : translateY(10px);
+                  transition : ease 0.5s;
+              }
+          </style>
+    </head>
+
+    <body>
+        <header>
+            <div class="container-fluid">
+                <div class="row jumbotron">
+                    <div class="col-md-2" style="border: 1px solid black">
+                        Image
+                    </div>
+                    <div class="col-md-8" style="border: 1px solid black">
+                        <h1 class="text-center"> Online Book Store </h1>
+                    </div>
+                    <div class="col-md-2" style="border: 1px solid black">
+                        Image
+                    </div>
+                    
+                </div>
+            </div>
+
+            
+            <nav class="navbar nav bg-info" style="border: 1px solid black">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Trending</a></li>
+                    <li><a href="">Categories</a></li>
+                    <li><a href="">About Us</a></li>
+                    <input type="text" class="form-inline">
+                    <button class="glyphicon glyphicon-search btn btn-warning">Search</button>
+                    <button class="glyphicon glyphicon-user btn btn-success">Login</button>
+                </ul>
+
+            </nav>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <img src="./preview.jpg" width="250" height="250">
+                            </div>
+                            <div class="card-title">
+                                Web Application
+                            </div>
+                            <div class="card-description">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur, velit.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <img src="./preview.jpg" width="250" height="250">
+                            </div>
+                            <div class="card-title">
+                                Web Application
+                            </div>
+                            <div class="card-description">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur, velit.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="card d-flex justify-content-center">
+                            <div class="card-body d-flex justify-content-center">
+                                <img src="./preview.jpg" width="250" height="250">
+                            </div>
+                            <div class="card-title d-flex justify-content-center">
+                                Web Application
+                            </div>
+                            <div class="card-description d-flex justify-content-center">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur, velit.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <img src="./preview.jpg" width="250" height="250">
+                            </div>
+                            <div class="card-title">
+                                Web Application
+                            </div>
+                            <div class="card-description">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur, velit.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+    </body>
+</html>

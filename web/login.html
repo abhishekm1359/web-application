@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Login</title>
+        <script src="login.js"></script>
+        <style>
+            .container{
+                width: 400px;
+                height: 300px;
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container"> 
+        <form action="" method="GET">
+            <h1><centre>LOGIN</centre></h1>
+            <label>Username : </label>
+            <input type="text" id="username" placeholder="enter username"> </br></br>
+            <label>Password : </label>
+            <centre><input type="password" id="password" pattern="/(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{7,14}/"></br></br></centre>    
+            <button type="submit" onclick="display()">Login</button>
+        </form>
+        </div>
+    </body>
+</html>
